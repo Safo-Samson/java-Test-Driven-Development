@@ -1,5 +1,6 @@
 package com.liamradley.javatddexample;
 
+import lombok.extern.flogger.Flogger;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
@@ -7,7 +8,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class JavaTddExampleApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(JavaTddExampleApplication.class, args);
+		System.out.println("You shouldn't have got here! Go run the test class!");
 	}
 
 }
