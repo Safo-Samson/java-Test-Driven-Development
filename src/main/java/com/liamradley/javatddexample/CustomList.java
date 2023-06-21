@@ -7,89 +7,69 @@ public class CustomList<E> implements List<E> {
     private Object[] underlyingArray;
 
     public CustomList() {
-        underlyingArray = new Object[0];
+        // fill in your method here
     }
     public CustomList(E[] array) {
-        underlyingArray = array;
+        // fill in your method here
     }
 
     @Override
     public int size() {
-        return underlyingArray.length;
+        // fill in your method here
+        return 0;
     }
 
     @Override
     public boolean isEmpty() {
-        return underlyingArray.length == 0;
+        // fill in your method here
+        return false;
     }
 
     @Override
     public boolean contains(Object o) {
-        return indexOf(o) != -1;
+        // fill in your method here
+        return false;
     }
 
     @Override
     public boolean add(E e) {
-        Object[] temp = Arrays.copyOf(underlyingArray, underlyingArray.length + 1);
-        temp[underlyingArray.length] = e;
-        underlyingArray = temp;
-        return true;
+        // fill in your method here
+        return false;
     }
 
     @Override
     public void clear() {
-        underlyingArray = new Object[]{};
+        // fill in your method here
     }
 
     @Override
     public Object[] toArray() {
-        return underlyingArray;
+        // fill in your method here
+        return null;
     }
 
     @Override
     public E get(int index) {
-        if(index < 0 || index > underlyingArray.length) {
-            throw new ArrayIndexOutOfBoundsException();
-        }
-        return (E) underlyingArray[index];
+        // fill in your method here
+        return null;
     }
 
     @Override
     public int indexOf(Object o) {
-        for(int index = 0; index < underlyingArray.length; index++) {
-            if(underlyingArray[index].equals(o)) {
-                return index;
-            }
-        }
-        return -1;
+        // fill in your method here
+        return 0;
     }
 
     @Override
     public boolean remove(Object o) {
-        int indexToRemove = indexOf(o);
-        if(indexToRemove == -1) {
-            return false;
-        }
-        Object[] temp = new Object[underlyingArray.length - 1];
-        int tempCounter = 0;
-        for(int index = 0; index <underlyingArray.length; index++) {
-            if(index != indexToRemove) {
-                temp[tempCounter] = underlyingArray[index];
-                tempCounter++;
-            }
-        }
-        underlyingArray = temp;
-        return true;
+        // fill in your method here
+        return false;
     }
 
     @Override
     public E remove(int index) {
-        if (index < 0 || index > underlyingArray.length) {
-            return null;
-        }
-        Object objectToRemove = underlyingArray[index];
-        remove(objectToRemove);
-        return (E) objectToRemove;
+        // fill in your method here
+        return null;
     }
 
 
