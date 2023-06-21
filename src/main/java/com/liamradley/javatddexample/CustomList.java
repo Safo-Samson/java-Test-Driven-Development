@@ -73,7 +73,7 @@ public class CustomList<E> implements List<E> {
     }
 
 
-    // Let's not worry about these two for now - we're only really worried about the above ones at the moment
+    // Let's not worry about these for now - we're only really worried about the above ones at the moment
 
     @Override
     public ListIterator<E> listIterator() {
