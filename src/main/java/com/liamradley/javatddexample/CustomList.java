@@ -32,6 +32,7 @@ public class CustomList<E> implements List<E> {
 
     @Override
     public boolean isEmpty() {
+        
         // fill in your method here
         if(this.size() == 0){
             return true;
