@@ -2,75 +2,144 @@ package com.liamradley.javatddexample;
 
 import java.util.*;
 
+import ch.qos.logback.core.status.OnConsoleStatusListener;
+
 public class CustomList<E> implements List<E> {
 
     private Object[] underlyingArray;
 
     public CustomList() {
+        underlyingArray = new Object[0];
         // fill in your method here
+        
     }
     public CustomList(E[] array) {
         // fill in your method here
+        this.underlyingArray = array;
+    
     }
 
     @Override
     public int size() {
-        // fill in your method here
-        return 0;
+        // fill in your method hexsre
+        int l = 0;
+        for(int i =0 ;i < underlyingArray.length;i++){
+            l++;
+        }
+        return l;
+      // return true;
     }
 
     @Override
     public boolean isEmpty() {
         // fill in your method here
-        return false;
+        if(this.size() == 0){
+            return true;
+        }
+        else{
+            return false;
+        }
+
+     //   return this.size() == 0 ? true : false
+        //return false;
     }
 
     @Override
     public boolean contains(Object o) {
-        // fill in your method here
-        return false;
+        for (Object object : underlyingArray) {
+            if(object.equals(o)){
+                return true;
+            }
+        }
+
+      return true;
     }
 
     @Override
     public boolean add(E e) {
         // fill in your method here
-        return false;
+        underlyingArray = Arrays.copyOf(underlyingArray,underlyingArray.length+1);
+        underlyingArray[underlyingArray.length] = e;
+        return true;
     }
 
     @Override
     public void clear() {
-        // fill in your method here
+        underlyingArray = new Object[0];
     }
 
     @Override
     public Object[] toArray() {
-        // fill in your method here
-        return null;
+        return underlyingArray;
     }
 
     @Override
     public E get(int index) {
-        // fill in your method here
-        return null;
+        return (E) underlyingArray[index];
     }
 
     @Override
     public int indexOf(Object o) {
-        // fill in your method here
+        int i = 0;
+        for(Object obs: underlyingArray){
+            i++;
+            if(obs.equals(o))
+            return i;
+
+        }
         return 0;
     }
 
     @Override
     public boolean remove(Object o) {
-        // fill in your method here
+        for (Object object : underlyingArray) {
+            if(object.equals(o)){
+                object = null;
+                return true;
+            }
+        }
         return false;
+        //return false;
     }
 
     @Override
     public E remove(int index) {
-        // fill in your method here
+     for(int i =0; i< underlyingArray.length;i++){
+        // if(i == index){
+        //     return (E) underlyingArray[index];
+        //     underlyingArray[index] = null;
+        // }
+     }
         return null;
     }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
     // Let's not worry about these for now - we're only really worried about the above ones at the moment
